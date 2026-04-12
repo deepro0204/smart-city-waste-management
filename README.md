@@ -79,7 +79,6 @@ smart_city_waste/
 │
 ├── README.md                      # Project documentation
 └── requirements.txt               # Python dependencies
-
 ---
 
 ## Features
