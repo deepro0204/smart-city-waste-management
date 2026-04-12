@@ -1,0 +1,82 @@
+[
+    {
+        "bin_id": "BIN_01",
+        "location": "MG Road",
+        "fill_level": 63.64,
+        "battery_level": 30.05,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_02",
+        "location": "Station Square",
+        "fill_level": 28.46,
+        "battery_level": 77.39,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_03",
+        "location": "City Mall",
+        "fill_level": 12.15,
+        "battery_level": 69.55,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_04",
+        "location": "Bus Stand",
+        "fill_level": 84.67,
+        "battery_level": 62.06,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_05",
+        "location": "Park Street",
+        "fill_level": 87.59,
+        "battery_level": 79.81,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_06",
+        "location": "Hospital Road",
+        "fill_level": 20.72,
+        "battery_level": 65.28,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_07",
+        "location": "Market Area",
+        "fill_level": 54.85,
+        "battery_level": 58.46,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_08",
+        "location": "School Zone",
+        "fill_level": 76.86,
+        "battery_level": 83.82,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_09",
+        "location": "Airport Gate",
+        "fill_level": 4.06,
+        "battery_level": 72.22,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    },
+    {
+        "bin_id": "BIN_10",
+        "location": "Tech Park",
+        "fill_level": 75.06,
+        "battery_level": 52.22,
+        "timestamp": "2026-04-10 15:29:02",
+        "status": "active"
+    }
+]

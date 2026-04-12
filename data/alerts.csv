@@ -1,0 +1,11 @@
+bin_id,location,fill_level,battery_level,timestamp,status
+BIN_02,Station Square,99.84,83.82,2026-04-10 15:28:58,active
+BIN_08,School Zone,94.51,82.2,2026-04-10 15:29:04,active
+BIN_08,School Zone,93.81,47.65,2026-04-10 15:29:00,active
+BIN_05,Park Street,87.59,79.81,2026-04-10 15:29:02,active
+BIN_08,School Zone,86.54,47.53,2026-04-10 15:28:56,active
+BIN_03,City Mall,85.6,36.39,2026-04-10 15:28:58,active
+BIN_04,Bus Stand,84.67,62.06,2026-04-10 15:29:02,active
+BIN_01,MG Road,82.31,69.26,2026-04-10 15:28:56,active
+BIN_04,Bus Stand,80.95,57.27,2026-04-10 15:28:56,active
+BIN_02,Station Square,80.23,97.76,2026-04-10 15:29:00,active
