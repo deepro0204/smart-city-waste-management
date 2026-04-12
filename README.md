@@ -30,16 +30,30 @@ IoT Sensors → Kafka → Processing → PostgreSQL → Streamlit Dashboard
 
 ## Architecture
 
-┌─────────────────┐     ┌───────────────┐     ┌─────────────────┐
-│  IoT Simulator  │────▶│  Apache Kafka  │────▶│  Kafka Consumer │
-│  (10 Smart Bins)│     │  waste-bin-data│     │  + Alert Engine │
-└─────────────────┘     └───────────────┘     └────────┬────────┘
-│
-▼
-┌─────────────────┐     ┌───────────────┐     ┌─────────────────┐
-│    Streamlit    │◀────│   PostgreSQL   │◀────│  Spark-style    │
-│    Dashboard    │     │   Database     │     │  Processor      │
-└─────────────────┘     └───────────────┘     └─────────────────┘
+## Architecture
+
+The system follows a complete Data Engineering pipeline:
+
+**Step 1 — Data Generation**
+IoT Sensor Simulator generates fill level data for 10 smart bins every 2 seconds.
+
+**Step 2 — Real-time Ingestion**
+Apache Kafka receives the sensor data through the `waste-bin-data` topic with 3 partitions.
+
+**Step 3 — Stream Processing**
+Kafka Consumer reads messages in real time, detects alerts, and saves to PostgreSQL.
+
+**Step 4 — Batch Processing**
+Spark-style processor performs aggregations — average, max, min fill levels per bin.
+
+**Step 5 — Storage**
+PostgreSQL stores all bin readings, alerts, and daily summaries in 3 tables.
+
+**Step 6 — Visualization**
+Streamlit dashboard displays live bin status, charts, and alerts.
+
+> **Pipeline Flow:**
+> `IoT Sensors` → `Apache Kafka` → `Kafka Consumer` → `PostgreSQL` → `Spark Processor` → `Streamlit Dashboard`
 
 ---
 
@@ -59,26 +73,20 @@ IoT Sensors → Kafka → Processing → PostgreSQL → Streamlit Dashboard
 
 ## Project Structure
 
-smart_city_waste/
-│
-├── data/                          # Raw JSON sensor data files
-├── logs/                          # Operation logs
-│   ├── simulator.log
-│   ├── analyzer.log
-│   ├── db_loader.log
-│   └── spark_processor.log
-│
-├── scripts/                       # All Python scripts
-│   ├── sensor_simulator.py        # Simulates 10 IoT bin sensors
-│   ├── data_analyzer.py           # Analyzes data with Pandas + NumPy
-│   ├── db_loader.py               # Loads data into PostgreSQL
-│   ├── kafka_producer.py          # Sends data to Kafka topic
-│   ├── kafka_consumer.py          # Reads from Kafka, saves to DB
-│   ├── spark_processor.py         # Spark-style data processing
-│   └── dashboard.py               # Streamlit live dashboard
-│
-├── README.md                      # Project documentation
-└── requirements.txt               # Python dependencies
+## Project Structure
+
+| File | Description |
+|---|---|
+| `scripts/sensor_simulator.py` | Simulates 10 IoT smart bin sensors |
+| `scripts/data_analyzer.py` | Analyzes data using Pandas and NumPy |
+| `scripts/db_loader.py` | Loads sensor data into PostgreSQL |
+| `scripts/kafka_producer.py` | Sends bin data to Kafka topic |
+| `scripts/kafka_consumer.py` | Reads from Kafka and saves to database |
+| `scripts/spark_processor.py` | Spark-style aggregations and processing |
+| `scripts/dashboard.py` | Live Streamlit dashboard |
+| `data/` | Raw JSON sensor data files |
+| `logs/` | Operation logs for all scripts |
+| `requirements.txt` | Python dependencies |
 
 ---
 
