@@ -73,6 +73,7 @@ Streamlit dashboard displays live bin status, charts, and alerts.
 
 ## Project Structure
 
+<<<<<<< HEAD
 ## Project Structure
 
 | File | Description |
@@ -88,6 +89,28 @@ Streamlit dashboard displays live bin status, charts, and alerts.
 | `logs/` | Operation logs for all scripts |
 | `requirements.txt` | Python dependencies |
 
+=======
+smart_city_waste/
+│
+├── data/                          # Raw JSON sensor data files
+├── logs/                          # Operation logs
+│   ├── simulator.log
+│   ├── analyzer.log
+│   ├── db_loader.log
+│   └── spark_processor.log
+│
+├── scripts/                       # All Python scripts
+│   ├── sensor_simulator.py        # Simulates 10 IoT bin sensors
+│   ├── data_analyzer.py           # Analyzes data with Pandas + NumPy
+│   ├── db_loader.py               # Loads data into PostgreSQL
+│   ├── kafka_producer.py          # Sends data to Kafka topic
+│   ├── kafka_consumer.py          # Reads from Kafka, saves to DB
+│   ├── spark_processor.py         # Spark-style data processing
+│   └── dashboard.py               # Streamlit live dashboard
+│
+├── README.md                      # Project documentation
+└── requirements.txt               # Python dependencies
+>>>>>>> 4d44a011c65fc4626e58cb592c7e447a771ce71f
 ---
 
 ## Features

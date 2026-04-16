@@ -1,11 +1,25 @@
 bin_id,location,fill_level,battery_level,timestamp,status
 BIN_02,Station Square,99.84,83.82,2026-04-10 15:28:58,active
+BIN_01,MG Road,97.27,40.46,2026-04-14 09:42:59,active
+BIN_01,MG Road,94.73,58.56,2026-04-14 09:42:57,active
 BIN_08,School Zone,94.51,82.2,2026-04-10 15:29:04,active
+BIN_09,Airport Gate,94.31,73.5,2026-04-14 09:43:01,active
+BIN_09,Airport Gate,94.1,61.55,2026-04-14 09:43:05,active
 BIN_08,School Zone,93.81,47.65,2026-04-10 15:29:00,active
+BIN_06,Hospital Road,91.62,76.96,2026-04-14 09:43:05,active
+BIN_08,School Zone,91.52,63.64,2026-04-14 09:43:03,active
+BIN_10,Tech Park,90.03,36.02,2026-04-14 09:43:03,active
+BIN_10,Tech Park,89.99,93.73,2026-04-14 09:42:57,active
+BIN_09,Airport Gate,89.48,92.6,2026-04-14 09:42:57,active
+BIN_03,City Mall,89.36,20.22,2026-04-14 09:42:57,active
+BIN_09,Airport Gate,88.65,32.74,2026-04-14 09:42:59,active
 BIN_05,Park Street,87.59,79.81,2026-04-10 15:29:02,active
+BIN_06,Hospital Road,87.29,73.32,2026-04-14 09:43:03,active
 BIN_08,School Zone,86.54,47.53,2026-04-10 15:28:56,active
 BIN_03,City Mall,85.6,36.39,2026-04-10 15:28:58,active
 BIN_04,Bus Stand,84.67,62.06,2026-04-10 15:29:02,active
+BIN_05,Park Street,83.79,96.04,2026-04-14 09:42:59,active
 BIN_01,MG Road,82.31,69.26,2026-04-10 15:28:56,active
 BIN_04,Bus Stand,80.95,57.27,2026-04-10 15:28:56,active
+BIN_02,Station Square,80.43,70.4,2026-04-14 09:42:59,active
 BIN_02,Station Square,80.23,97.76,2026-04-10 15:29:00,active
