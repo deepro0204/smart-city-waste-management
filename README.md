@@ -19,7 +19,8 @@ Urban waste management is inefficient — garbage trucks follow fixed routes reg
 ## Solution
 
 This system simulates 10 smart bins across a city. Each bin has a sensor that continuously reports its fill level. The data flows through a complete Data Engineering pipeline:
-IoT Sensors → Kafka → Processing → PostgreSQL → Streamlit Dashboard
+
+> `IoT Sensors` → `Apache Kafka` → `Kafka Consumer` → `PostgreSQL` → `Spark Processor` → `Streamlit Dashboard`
 
 - Bins above **80% full** trigger automatic alerts
 - City managers can see live bin status on a dashboard
@@ -30,9 +31,7 @@ IoT Sensors → Kafka → Processing → PostgreSQL → Streamlit Dashboard
 
 ## Architecture
 
-## Architecture
-
-The system follows a complete Data Engineering pipeline:
+The system follows a complete Data Engineering pipeline with 6 stages:
 
 **Step 1 — Data Generation**
 IoT Sensor Simulator generates fill level data for 10 smart bins every 2 seconds.
@@ -52,9 +51,6 @@ PostgreSQL stores all bin readings, alerts, and daily summaries in 3 tables.
 **Step 6 — Visualization**
 Streamlit dashboard displays live bin status, charts, and alerts.
 
-> **Pipeline Flow:**
-> `IoT Sensors` → `Apache Kafka` → `Kafka Consumer` → `PostgreSQL` → `Spark Processor` → `Streamlit Dashboard`
-
 ---
 
 ## Tech Stack
@@ -73,9 +69,6 @@ Streamlit dashboard displays live bin status, charts, and alerts.
 
 ## Project Structure
 
-<<<<<<< HEAD
-## Project Structure
-
 | File | Description |
 |---|---|
 | `scripts/sensor_simulator.py` | Simulates 10 IoT smart bin sensors |
@@ -89,28 +82,6 @@ Streamlit dashboard displays live bin status, charts, and alerts.
 | `logs/` | Operation logs for all scripts |
 | `requirements.txt` | Python dependencies |
 
-=======
-smart_city_waste/
-│
-├── data/                          # Raw JSON sensor data files
-├── logs/                          # Operation logs
-│   ├── simulator.log
-│   ├── analyzer.log
-│   ├── db_loader.log
-│   └── spark_processor.log
-│
-├── scripts/                       # All Python scripts
-│   ├── sensor_simulator.py        # Simulates 10 IoT bin sensors
-│   ├── data_analyzer.py           # Analyzes data with Pandas + NumPy
-│   ├── db_loader.py               # Loads data into PostgreSQL
-│   ├── kafka_producer.py          # Sends data to Kafka topic
-│   ├── kafka_consumer.py          # Reads from Kafka, saves to DB
-│   ├── spark_processor.py         # Spark-style data processing
-│   └── dashboard.py               # Streamlit live dashboard
-│
-├── README.md                      # Project documentation
-└── requirements.txt               # Python dependencies
->>>>>>> 4d44a011c65fc4626e58cb592c7e447a771ce71f
 ---
 
 ## Features
@@ -120,7 +91,7 @@ smart_city_waste/
 - **Battery Monitoring** — Low battery warnings for each bin
 - **Data Warehousing** — Daily summaries stored in PostgreSQL
 - **Live Dashboard** — Color-coded bin status (Critical/Moderate/Normal)
-- **Interactive Charts** — Fill level bar chart, status pie chart, battery chart
+- **Interactive Charts** — Fill level bar chart, battery chart, gauge chart
 - **Log Management** — Every operation logged with timestamps
 
 ---
@@ -150,7 +121,7 @@ Aggregated daily statistics per bin — acts as a data warehouse table.
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/smart-city-waste-management.git
+git clone https://github.com/deepro0204/smart-city-waste-management.git
 cd smart-city-waste-management
 ```
 
@@ -170,7 +141,6 @@ pip install -r requirements.txt
 psql -U postgres
 CREATE DATABASE smart_city_waste;
 \c smart_city_waste
-# Run the table creation SQL queries
 ```
 
 **5. Start Kafka**
@@ -223,9 +193,10 @@ The live Streamlit dashboard shows:
 - City overview metrics (total, critical, moderate, normal bins)
 - Live bin status cards with color coding
 - Fill level bar chart with alert threshold line
-- Bin status distribution pie chart
-- Recent alerts table
+- Average fill level gauge chart
+- Recent alerts table with highlighted critical alerts
 - Battery level monitoring chart
+- Summary statistics tables
 
 ---
 
@@ -242,10 +213,10 @@ The live Streamlit dashboard shows:
 
 ## Author
 
-**Name:** Deepro Bhattacharyya  
-**Roll Number:** 23051340  
-**Batch/Program:** B.Tech CSE  
-**Project Type:** Data Engineering Project
+**Name:** Deepro Bhattacharyya
+**Roll Number:** 23051340
+**Batch/Program:** B.Tech CSE
+**Project Type:** Data Engineering Capstone Project
 
 ---
 
